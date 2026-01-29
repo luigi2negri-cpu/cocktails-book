@@ -5,7 +5,7 @@ const filterBase = document.getElementById("filter-base");
 let cocktails = [];
 
 async function loadCocktails() {
-  const res = await fetch("data/cocktails.json");
+  const res = await fetch("https://adenophyllous-ernestina-weevilly.ngrok-free.dev");
   cocktails = await res.json();
   renderList(cocktails);
 }

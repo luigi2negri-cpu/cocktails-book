@@ -4,10 +4,11 @@ function getSlugFromQuery() {
 }
 
 async function loadCocktails() {
-  const res = await fetch("https://adenophyllous-ernestina-weevilly.ngrok-free.dev");
+  const res = await fetch("https://adenophyllous-ernestina-weevilly.ngrok-free.dev/api/cocktails");
   cocktails = await res.json();
   renderList(cocktails);
 }
+
 
 
 function renderCocktail(c) {

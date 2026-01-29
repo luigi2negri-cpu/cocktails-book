@@ -5,10 +5,11 @@ const filterBase = document.getElementById("filter-base");
 let cocktails = [];
 
 async function loadCocktails() {
-  const res = await fetch("https://adenophyllous-ernestina-weevilly.ngrok-free.dev");
+  const res = await fetch("https://adenophyllous-ernestina-weevilly.ngrok-free.dev/api/cocktails");
   cocktails = await res.json();
   renderList(cocktails);
 }
+
 
 function guessBaseSpirit(cocktail) {
   const text = (cocktail.ingredienti || []).join(" ").toLowerCase();

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Classic Cocktails Book</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Classic Cocktails Book</h1>
+    <p>Un libro di cocktail consultabile, basato sulle grandi ricette classiche.</p>
+  </header>
+
+  <section class="controls">
+    <input type="text" id="search" placeholder="Cerca per nome, autore, ingrediente..." />
+    <select id="filter-base">
+      <option value="">Tutti i distillati</option>
+      <option value="gin">Gin</option>
+      <option value="rum">Rum</option>
+      <option value="whiskey">Whiskey</option>
+      <option value="tequila">Tequila</option>
+      <option value="vodka">Vodka</option>
+      <!-- puoi espandere -->
+    </select>
+  </section>
+
+  <main id="cocktail-list" class="cocktail-list">
+    <!-- generato via JS -->
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

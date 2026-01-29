@@ -1,0 +1,92 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 0 1rem 2rem;
+  background: #111;
+  color: #eee;
+}
+
+header {
+  max-width: 960px;
+  margin: 1.5rem auto;
+}
+
+h1, h2 {
+  color: #f5f5f5;
+}
+
+.controls {
+  max-width: 960px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.controls input,
+.controls select {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background: #222;
+  color: #eee;
+}
+
+.cocktail-list {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.cocktail-card {
+  background: #181818;
+  border-radius: 8px;
+  padding: 0.5rem 0.5rem 0.75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.cocktail-card a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cocktail-card img.thumb {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.cocktail-card h2 {
+  margin: 0.2rem 0;
+  font-size: 1.1rem;
+}
+
+.cocktail-card .meta,
+.cocktail-card .place,
+.cocktail-card .base {
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+.cocktail-detail {
+  max-width: 720px;
+  margin: 1rem auto;
+}
+
+.cocktail-detail img.hero {
+  width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}

@@ -4,7 +4,7 @@ function getSlugFromQuery() {
 }
 
 async function loadCocktail(slug) {
-  const res = await fetch(`https://adenophyllous-ernestina-weevilly.ngrok-free.dev/api/cocktails/slug/${encodeURIComponent(slug)}`);
+  const res = await fetch(`http://localhost:3000${encodeURIComponent(slug)}`);
   if (!res.ok) {
     return null;
   }

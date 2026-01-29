@@ -10,7 +10,6 @@ async function loadCocktails() {
   renderList(cocktails);
 }
 
-
 function guessBaseSpirit(cocktail) {
   const text = (cocktail.ingredienti || []).join(" ").toLowerCase();
   if (text.includes("gin")) return "gin";

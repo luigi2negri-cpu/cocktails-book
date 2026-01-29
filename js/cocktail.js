@@ -3,13 +3,13 @@ function getSlugFromQuery() {
   return params.get("slug");
 }
 
-async function loadCocktails() {
-  const res = await fetch("https://adenophyllous-ernestina-weevilly.ngrok-free.dev/api/cocktails");
-  cocktails = await res.json();
-  renderList(cocktails);
+async function loadCocktail(slug) {
+  const res = await fetch(`https://adenophyllous-ernestina-weevilly.ngrok-free.dev/api/cocktails/slug/${encodeURIComponent(slug)}`);
+  if (!res.ok) {
+    return null;
+  }
+  return await res.json();
 }
-
-
 
 function renderCocktail(c) {
   const container = document.getElementById("cocktail-detail");

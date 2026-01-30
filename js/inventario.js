@@ -1,4 +1,4 @@
-const INVENTORY_API_BASE = 'https://cocktails-book-back-end.onrender.com/api/inventory'; // cambia se diverso
+const INVENTORY_API_BASE = 'https://cocktails-book-back-end.onrender.com/'; // cambia se diverso
 
 async function loadInventory() {
   try {

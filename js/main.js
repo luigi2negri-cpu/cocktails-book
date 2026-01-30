@@ -4,7 +4,7 @@ const filterBase = document.getElementById("filter-base");
 const btnAll = document.getElementById("btn-all");
 const btnAvailable = document.getElementById("btn-available");
 
-const API_BASE = "https://cocktails-book-backend.onrender.com/api/cocktails"; // cambia se usi un altro dominio
+const API_BASE = "https://cocktails-book-back-end.onrender.com/api/cocktails"; // cambia se usi un altro dominio
 
 let cocktails = [];
 

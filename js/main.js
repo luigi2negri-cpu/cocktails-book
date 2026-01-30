@@ -5,7 +5,7 @@ const filterBase = document.getElementById("filter-base");
 let cocktails = [];
 
 async function loadCocktails() {
-  const res = await fetch("https://adenophyllous-ernestina-weevilly.ngrok-free.dev/api/cocktails");
+  const res = await fetch("https://cocktails-book-backend.onrender.com/api/cocktails");
   cocktails = await res.json();
   renderList(cocktails);
 }

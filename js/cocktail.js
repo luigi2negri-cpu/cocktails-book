@@ -21,6 +21,22 @@ function renderCocktail(c) {
 
   const imgSrc = c.image || "https://via.placeholder.com/600x400?text=Cocktail";
 
+  // gestisce ingredienti sia come array di stringhe sia come array di oggetti
+  const ingredientiHtml = (c.ingredienti || [])
+    .map((i) => {
+      if (typeof i === "string") {
+        return `<li>${i}</li>`;
+      }
+      const nome = i.nome || i.name || "";
+      const qty =
+        i.quantita ||
+        i.quantity ||
+        i.qta ||
+        "";
+      return `<li>${qty ? qty + " – " : ""}${nome}</li>`;
+    })
+    .join("");
+
   container.innerHTML = `
     <article>
       <h1>${c.nome}</h1>
@@ -34,9 +50,7 @@ function renderCocktail(c) {
       <section>
         <h2>Ingredienti</h2>
         <ul>
-          ${(c.ingredienti || [])
-            .map(i => `<li>${i}</li>`)
-            .join("")}
+          ${ingredientiHtml}
         </ul>
       </section>
 
